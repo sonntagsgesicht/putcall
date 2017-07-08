@@ -32,7 +32,7 @@ setup(
               'optionpricing.formulas.exotic_options',
               'optionpricing.formulas.interest_rate_options',
               'optionpricing.calibration'],
-    install_requires=['mathtools'],
+    install_requires=['mathtoolspy'],
     long_description=codecs.open('README.rst', encoding='utf-8').read(),
     platforms='any',
     classifiers=[

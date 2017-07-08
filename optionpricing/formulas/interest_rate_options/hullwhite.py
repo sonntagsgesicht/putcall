@@ -12,7 +12,7 @@
 
 import math
 
-from mathtools.distribution.normal_distribution import cdf_abramowitz_stegun as normal_cdf
+from mathtoolspy.distribution.normal_distribution import cdf_abramowitz_stegun as normal_cdf
 
 
 def hw_discount_bond_option(forward_value, strike_value, implied_vol_value, time_value, is_call_bool,

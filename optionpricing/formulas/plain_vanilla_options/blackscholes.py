@@ -1,6 +1,6 @@
 import math
 
-from mathtools.distribution.normal_distribution import cdf_abramowitz_stegun as normal_cdf
+from mathtoolspy.distribution.normal_distribution import cdf_abramowitz_stegun as normal_cdf
 #from ..option_payoffs import option_payoff
 from optionpricing.formulas.option_payoffs import option_payoff
 

@@ -12,8 +12,8 @@
 
 from math import sqrt, log
 
-from mathtools import cdf_abramowitz_stegun as normal_cdf
-from mathtools import density_normal_dist as normal_density
+from mathtoolspy import cdf_abramowitz_stegun as normal_cdf
+from mathtoolspy import density_normal_dist as normal_density
 
 #from ..option_payoffs import option_payoff, digital_option_payoff, straddle_payoff
 from optionpricing.formulas.option_payoffs import option_payoff, digital_option_payoff, straddle_payoff

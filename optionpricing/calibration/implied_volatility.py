@@ -10,8 +10,8 @@
 #  License: APACHE Version 2 License (see LICENSE file)
 
 
-from mathtools import Optimizer1Dim, Constraint
-from mathtools.solver.minimize_algorithm_1dim_brent import minimize_algorithm_1dim_brent as brent
+from mathtoolspy import Optimizer1Dim, Constraint
+from mathtoolspy.solver.minimize_algorithm_1dim_brent import minimize_algorithm_1dim_brent as brent
 
 
 class OptionValueByVolatility:
