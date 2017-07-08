@@ -2,8 +2,12 @@
 putcall - option pricing formulae
 =================================
 
-.. image:: https://img.shields.io/codeship/b731e790-9d6a-0134-75d5-4e318545e956/master.svg
-    :target: https://codeship.com//projects/188643
+.. image:: https://img.shields.io/codeship/502640f0-461a-0135-6835-62afb45a34d4/master.svg
+    :target: https://codeship.com//projects/231333
+
+.. image:: https://readthedocs.org/projects/putcall/badge
+    :target: http://putcall.readthedocs.io
+
 
 Collection of classical option pricing formulas.
 
