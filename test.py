@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 
-#  optionpricing
+#  putcall
 #  -----------
 #  Collection of classical option pricing formulas.
 #
 #  Author:  pbrisk <pbrisk_at_github@icloud.com>
-#  Website: https://github.com/pbrisk/optionpricing
+#  Website: https://github.com/pbrisk/putcall
 #  License: MIT (see LICENSE file)
 
 import os
 import unittest
 
-from optionpricing import OptionType, OptionValuatorIntrinsic, \
+from putcall import OptionType, OptionValuatorIntrinsic, \
     OptionValuatorN, OptionValuatorLN, OptionValuatorSLN
 from datetime import datetime
 

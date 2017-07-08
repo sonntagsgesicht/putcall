@@ -20,12 +20,12 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../..'))
-sys.path.insert(0, os.path.abspath('../../optionpricing'))
-sys.path.insert(0, os.path.abspath('../../optionpricing/calibration'))
-sys.path.insert(0, os.path.abspath('../../optionpricing/formulas'))
-sys.path.insert(0, os.path.abspath('../../optionpricing/formulas/exotic_options'))
-sys.path.insert(0, os.path.abspath('../../optionpricing/formulas/interest_rate_options'))
-sys.path.insert(0, os.path.abspath('../../optionpricing/formulas/plain_vanilla_options'))
+sys.path.insert(0, os.path.abspath('../../putcall'))
+sys.path.insert(0, os.path.abspath('../../putcall/calibration'))
+sys.path.insert(0, os.path.abspath('../../putcall/formulas'))
+sys.path.insert(0, os.path.abspath('../../putcall/formulas/exotic_options'))
+sys.path.insert(0, os.path.abspath('../../putcall/formulas/interest_rate_options'))
+sys.path.insert(0, os.path.abspath('../../putcall/formulas/plain_vanilla_options'))
 
 source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser',}
 
@@ -155,7 +155,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'optionpricing.tex', 'OptionPricing Documentation',
+    (master_doc, 'putcall.tex', 'OptionPricing Documentation',
      'Deutsche Postbank AG', 'manual'),
 ]
 
@@ -165,7 +165,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'optionpricing', 'OptionPricing Documentation',
+    (master_doc, 'putcall', 'OptionPricing Documentation',
      [author], 1)
 ]
 
@@ -176,7 +176,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'optionpricing', 'OptionPricing Documentation',
+    (master_doc, 'putcall', 'OptionPricing Documentation',
      author, 'OptionPricing', 'One line description of project.',
      'Miscellaneous'),
 ]

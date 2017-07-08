@@ -2,7 +2,7 @@
 import numpy as np
 from scipy.optimize import minimize
 
-from optionpricing.formulas.interest_rate_options import sabr
+from putcall.formulas.interest_rate_options import sabr
 
 
 def tprint(*args):

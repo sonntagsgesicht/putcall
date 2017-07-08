@@ -2,7 +2,7 @@ import math
 
 from mathtoolspy.distribution.normal_distribution import cdf_abramowitz_stegun as normal_cdf
 #from ..option_payoffs import option_payoff
-from optionpricing.formulas.option_payoffs import option_payoff
+from putcall.formulas.option_payoffs import option_payoff
 
 
 def black_scholes(strike_value, forward_value, implied_vol_value, time_value, is_call_bool, rf):

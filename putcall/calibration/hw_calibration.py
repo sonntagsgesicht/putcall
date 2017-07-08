@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 
-#  optionpricing
+#  putcall
 #  ------------
 #  Collection of classical option pricing formulas.
 #
 #  Author:  pbrisk <pbrisk_at_github@icloud.com>
 #  Copyright: 2016, 2017 Deutsche Postbank AG
-#  Website: https://github.com/pbrisk/optionpricing
+#  Website: https://github.com/pbrisk/putcall
 #  License: APACHE Version 2 License (see LICENSE file)
 
 
 #from ..formulas import hw_cap_floor_let
-from optionpricing.formulas import hw_cap_floor_let
+from putcall.formulas import hw_cap_floor_let
 
 EPS = 1e-12
 

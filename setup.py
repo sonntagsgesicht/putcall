@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-#  optionpricing
+#  putcall
 #  ------------
 #  Collection of classical option pricing formulas.
 #
 #  Author:  pbrisk <pbrisk_at_github@icloud.com>
 #  Copyright: 2016, 2017 Deutsche Postbank AG
-#  Website: https://github.com/pbrisk/optionpricing
+#  Website: https://github.com/pbrisk/putcall
 #  License: APACHE Version 2 License (see LICENSE file)
 
 
@@ -18,20 +18,20 @@ except ImportError:
 
 
 setup(
-    name='optionpricing',
+    name='putcall',
     description='Collection of classical option pricing formulas.',
     version='0.1',
     author='Deutsche Postbank AG [pbrisk]',
     author_email='pbrisk_at_github@icloud.com',
-    url='https://github.com/pbrisk/optionpricing',
-    bugtrack_url='https://github.com/pbrisk/optionpricing/issues',
+    url='https://github.com/pbrisk/putcall',
+    bugtrack_url='https://github.com/pbrisk/putcall/issues',
     license='Apache License 2.0',
-    packages=['optionpricing',
-              'optionpricing.formulas',
-              'optionpricing.formulas.plain_vanilla_options',
-              'optionpricing.formulas.exotic_options',
-              'optionpricing.formulas.interest_rate_options',
-              'optionpricing.calibration'],
+    packages=['putcall',
+              'putcall.formulas',
+              'putcall.formulas.plain_vanilla_options',
+              'putcall.formulas.exotic_options',
+              'putcall.formulas.interest_rate_options',
+              'putcall.calibration'],
     install_requires=['mathtoolspy'],
     long_description=codecs.open('README.rst', encoding='utf-8').read(),
     platforms='any',

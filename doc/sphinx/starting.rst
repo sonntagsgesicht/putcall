@@ -15,19 +15,19 @@ The latest stable version can always be installed or updated via pip:
 
 .. code-block:: bash
 
-    $ pip install optionpricing
+    $ pip install putcall
 
 If the above fails, please try easy_install instead:
 
 .. code-block:: bash
 
-    $ easy_install optionpricing
+    $ easy_install putcall
 
 
 Requirements
 ============
 
-View project `requirements <https://github.com/sonntagsgesicht/optionpricing/raw/master/requirements.txt>`_.
+View project `requirements <https://github.com/sonntagsgesicht/putcall/raw/master/requirements.txt>`_.
 
 
 User Guide
@@ -38,7 +38,7 @@ Follow our tutorials and study the api documentation.
 
 License
 =======
-View the open source `LICENSE <https://github.com/sonntagsgesicht/optionpricing/raw/master/LICENSE>`_.
+View the open source `LICENSE <https://github.com/sonntagsgesicht/putcall/raw/master/LICENSE>`_.
 
 
 How to contribute
