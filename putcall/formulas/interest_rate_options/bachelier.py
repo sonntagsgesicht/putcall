@@ -49,6 +49,7 @@ def bachelier(forward_value, strike_value, implied_vol_value, time_value, is_cal
     put_value = -fms * normal_cdf(-d) + sigma * normal_density(d)
     return call_value if is_call_bool else call_value - fms  # put
 
+
 def bachelier_delta(forward_value, strike_value, implied_vol_value, time_value, is_call_bool):
     """
     delta sensitivity for Bachelier formula.

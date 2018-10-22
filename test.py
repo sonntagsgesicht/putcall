@@ -11,6 +11,9 @@
 import os
 import unittest
 
+from math import exp
+
+from putcall import black_scholes
 from putcall import OptionType, OptionValuatorIntrinsic, \
     OptionValuatorN, OptionValuatorLN, OptionValuatorSLN
 from datetime import datetime
@@ -180,7 +183,21 @@ class BlackScholesUnitTests(unittest.TestCase):
         pass
 
     def test_call(self):
-        self.assertTrue(True)
+        spot, strike, time, rate, vol, call, put = 100., 120., 1., 0.05, .2, 3.2475, 17.395
+        self.assertAlmostEqual(call, black_scholes(spot, strike, vol, time, True, rate), 4)
+        self.assertAlmostEqual(put, black_scholes(spot, strike, vol, time, False, rate), 4)
+
+        spot, strike, time, rate, vol, call, put = 100., 120., 3., 0.05, .2, 12.3945, 15.6795
+        self.assertAlmostEqual(call, black_scholes(spot, strike, vol, time, True, rate), 4)
+        self.assertAlmostEqual(put, black_scholes(spot, strike, vol, time, False, rate), 4)
+
+        spot, strike, time, rate, vol, call, put = 100., 120., 2., 0.07, .15, 6.6386, 10.9616
+        self.assertAlmostEqual(call, black_scholes(spot, strike, vol, time, True, rate), 4)
+        self.assertAlmostEqual(put, black_scholes(spot, strike, vol, time, False, rate), 4)
+
+        spot, strike, time, rate, vol, call, put = 100., 90., 2., 0.02, .15, 16.4094, 2.8805
+        self.assertAlmostEqual(call, black_scholes(spot, strike, vol, time, True, rate), 4)
+        self.assertAlmostEqual(put, black_scholes(spot, strike, vol, time, False, rate), 4)
 
     def test_put(self):
         self.assertTrue(True)

@@ -19,6 +19,7 @@ pace_log = logging.getLogger('pace')
 
 EPS = 0.000000001
 
+
 def sabr_black_vol(strike_value, forward_value, alpha_value, beta_value, nu_value, rho_value, time_value):
     '''
     :param strike_value:
@@ -39,29 +40,35 @@ def sabr_black_vol(strike_value, forward_value, alpha_value, beta_value, nu_valu
     :rtype:
     '''
     return_value = 0.00
-    #Compute the Black equivalent voltatility from SABR model
-    forward_strike_value    = forward_value * strike_value
-    log_moneyness_value     = math.log(forward_value / strike_value)
-    one_minus_beta_value    = 1 - beta_value
-    factor                  = 0.00
+    # Compute the Black equivalent voltatility from SABR model
+    forward_strike_value = forward_value * strike_value
+    log_moneyness_value = math.log(forward_value / strike_value)
+    one_minus_beta_value = 1 - beta_value
+    factor = 0.00
     if abs(strike_value - forward_value) > EPS:
-        Z = nu_value / alpha_value *  forward_strike_value  **  ( one_minus_beta_value / 2 )  * log_moneyness_value
-        xz = math.log(( math.sqrt( 1 - 2 * rho_value * Z + Z * Z ) + Z - rho_value )  /  ( 1 - rho_value ))
-        denom_value = forward_strike_value **  ( one_minus_beta_value / 2 )  *  ( 1 + one_minus_beta_value ** 2 / 24 * log_moneyness_value **2 + one_minus_beta_value **4 / 1920 * log_moneyness_value ** 4)
-        factor = one_minus_beta_value ** 2 / 24 * alpha_value ** 2 /  ( forward_strike_value ** one_minus_beta_value )
-        factor = factor + 0.25 * rho_value * beta_value * alpha_value * nu_value /  ( forward_strike_value **  ( one_minus_beta_value / 2 ) )
-        factor = factor + ( 2 - 3 * rho_value ** 2 )  * nu_value **2 / 24
+        Z = nu_value / alpha_value * forward_strike_value ** (one_minus_beta_value / 2) * log_moneyness_value
+        xz = math.log((math.sqrt(1 - 2 * rho_value * Z + Z * Z) + Z - rho_value) / (1 - rho_value))
+        denom_value = forward_strike_value ** (one_minus_beta_value / 2) * (
+        1 + one_minus_beta_value ** 2 / 24 * log_moneyness_value ** 2 + one_minus_beta_value ** 4 / 1920 * log_moneyness_value ** 4)
+        factor = one_minus_beta_value ** 2 / 24 * alpha_value ** 2 / (forward_strike_value ** one_minus_beta_value)
+        factor = factor + 0.25 * rho_value * beta_value * alpha_value * nu_value / (
+        forward_strike_value ** (one_minus_beta_value / 2))
+        factor = factor + (2 - 3 * rho_value ** 2) * nu_value ** 2 / 24
         factor = 1 + factor * time_value
         # obloj correction
-        #return_value = alpha_value / denom_value * Z / xz * factor
+        # return_value = alpha_value / denom_value * Z / xz * factor
         return_value = alpha_value / denom_value * factor
     else:
-        #factor = ( 1 +  ( one_minus_beta_value **2 / 24 * alpha_value ** 2 /  ( forward_value ** ( 2 * one_minus_beta_value ) ) + 0.25 * rho_value * beta_value * alpha_value * nu_value /  ( forward_value ** one_minus_beta_value )  +  ( 2 - 3 * rho_value * rho_value )  * nu_value * nu_value / 24 )  * time_value )
-        factor = one_minus_beta_value **2 / 24 * alpha_value **2 / ( forward_value ** ( 2 * one_minus_beta_value ) )
-        factor = factor + 0.25 * rho_value * beta_value * alpha_value * nu_value / ( forward_value ** one_minus_beta_value )
-        factor = factor + ( 2 - 3 * rho_value **2 ) * nu_value **2 / 24
+        # factor = ( 1 +  ( one_minus_beta_value **2 / 24 * alpha_value ** 2 /  ( forward_value ** ( 2 * one_minus_beta_value ) ) + 0.25 * rho_value * beta_value * alpha_value * nu_value /  ( forward_value ** one_minus_beta_value )  +  ( 2 - 3 * rho_value * rho_value )  * nu_value * nu_value / 24 )  * time_value )
+        factor = one_minus_beta_value ** 2 / 24 * alpha_value ** 2 / (forward_value ** (2 * one_minus_beta_value))
+        factor = factor + 0.25 * rho_value * beta_value * alpha_value * nu_value / (
+        forward_value ** one_minus_beta_value)
+        factor = factor + (2 - 3 * rho_value ** 2) * nu_value ** 2 / 24
         factor = 1 + factor * time_value
-        factor = ( 1 +  ( one_minus_beta_value **2 / 24 * alpha_value ** 2 /  ( forward_value ** ( 2 * one_minus_beta_value ) ) + 0.25 * rho_value * beta_value * alpha_value * nu_value /  ( forward_value ** one_minus_beta_value )  +  ( 2 - 3 * rho_value * rho_value )  * nu_value * nu_value / 24 )  * time_value )
+        factor = (1 + (one_minus_beta_value ** 2 / 24 * alpha_value ** 2 / (
+        forward_value ** (2 * one_minus_beta_value)) + 0.25 * rho_value * beta_value * alpha_value * nu_value / (
+                       forward_value ** one_minus_beta_value) + (
+                       2 - 3 * rho_value * rho_value) * nu_value * nu_value / 24) * time_value)
         return_value = alpha_value / forward_value ** one_minus_beta_value * factor
     return return_value
 
@@ -108,9 +115,10 @@ def sabr_alpha_from_atm(forward_value, atm_vol_value, beta_value, nu_value, rho_
     :rtype:
     '''
     alpha_value = 0.0
-    diff = sabr_black_vol(forward_value, forward_value, alpha_value, beta_value, nu_value, rho_value, time_value) - atm_vol_value
+    diff = sabr_black_vol(forward_value, forward_value, alpha_value, beta_value, nu_value, rho_value,
+                          time_value) - atm_vol_value
     while diff < EPS:
         alpha_value += EPS
-        diff = sabr_black_vol(forward_value, forward_value, alpha_value, beta_value, nu_value, rho_value, time_value) - atm_vol_value
+        diff = sabr_black_vol(forward_value, forward_value, alpha_value, beta_value, nu_value, rho_value,
+                              time_value) - atm_vol_value
     return alpha_value
-
