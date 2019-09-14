@@ -10,7 +10,7 @@
 # License:  Apache License 2.0 (see LICENSE file)
 
 
-from option_payoffs import *
-from plain_vanilla_options import *
-from exotic_options import *
-from interest_rate_options import *
+from .option_payoffs import *
+from .plain_vanilla_options import *
+from .exotic_options import *
+from .interest_rate_options import *

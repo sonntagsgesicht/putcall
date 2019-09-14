@@ -3,7 +3,7 @@
 # putcall
 # -------
 # Collection of classical option pricing formulas.
-# 
+#
 # Author:   sonntagsgesicht, based on a fork of Deutsche Postbank [pbrisk]
 # Version:  0.2, copyright Saturday, 14 September 2019
 # Website:  https://github.com/sonntagsgesicht/putcall
@@ -133,7 +133,7 @@ class OptionValuatorTests(unittest.TestCase):
         places = 10
         self.assertAlmostEqual(b_option_value, r_option_value, places)
         self.assertAlmostEqual(b_delta, r_delta, places)
-        self.assertAlmostEqual(b_gamma, r_gamma, places*6/10)
+        self.assertAlmostEqual(b_gamma, r_gamma, int(places*6/10))
         self.assertAlmostEqual(b_vega, r_vega, places)
 
     def test_option_valuator_intrinsic(self):
@@ -217,9 +217,9 @@ if __name__ == "__main__":
     print('')
     print('======================================================================')
     print('')
-    print('run %s' % __file__)
-    print('in %s' % os.getcwd())
-    print('started  at %s' % str(start_time))
+    print(('run %s' % __file__))
+    print(('in %s' % os.getcwd()))
+    print(('started  at %s' % str(start_time)))
     print('')
     print('----------------------------------------------------------------------')
     print('')
@@ -231,10 +231,10 @@ if __name__ == "__main__":
     print('')
     print('======================================================================')
     print('')
-    print('ran %s' % __file__)
-    print('in %s' % os.getcwd())
-    print('started  at %s' % str(start_time))
-    print('finished at %s' % str(datetime.now()))
+    print(('ran %s' % __file__))
+    print(('in %s' % os.getcwd()))
+    print(('started  at %s' % str(start_time)))
+    print(('finished at %s' % str(datetime.now())))
     print('')
     print('----------------------------------------------------------------------')
     print('')

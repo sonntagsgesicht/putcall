@@ -10,21 +10,21 @@
 # License:  Apache License 2.0 (see LICENSE file)
 
 
-from formulas import option_payoff, digital_option_payoff, straddle_payoff
+from .formulas import option_payoff, digital_option_payoff, straddle_payoff
 
-from formulas import black, black_delta, black_gamma, black_vega
-from formulas import black_digital, black_digital_delta, black_digital_gamma, black_digital_vega
-from formulas import black_straddle, black_straddle_delta, black_straddle_gamma, black_straddle_vega
+from .formulas import black, black_delta, black_gamma, black_vega
+from .formulas import black_digital, black_digital_delta, black_digital_gamma, black_digital_vega
+from .formulas import black_straddle, black_straddle_delta, black_straddle_gamma, black_straddle_vega
 
-from formulas import bachelier, bachelier_delta, bachelier_gamma, bachelier_vega
-from formulas import bachelier_digital, bachelier_digital_delta, bachelier_digital_gamma, bachelier_digital_vega
-from formulas import bachelier_straddle, bachelier_straddle_delta, bachelier_straddle_gamma, bachelier_straddle_vega
+from .formulas import bachelier, bachelier_delta, bachelier_gamma, bachelier_vega
+from .formulas import bachelier_digital, bachelier_digital_delta, bachelier_digital_gamma, bachelier_digital_vega
+from .formulas import bachelier_straddle, bachelier_straddle_delta, bachelier_straddle_gamma, bachelier_straddle_vega
 
-from calibration import OptionValueByVolatility, ImpliedVolCalculator
+from .calibration import OptionValueByVolatility, ImpliedVolCalculator
 
 
 class OptionType(object):
-    CALL, PUT, DIGITAL_CALL, DIGITAL_PUT, STRADDLE = range(5)
+    CALL, PUT, DIGITAL_CALL, DIGITAL_PUT, STRADDLE = list(range(5))
 
 
 class OptionValuator(object):
