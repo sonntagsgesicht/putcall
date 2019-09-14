@@ -12,7 +12,7 @@
 
 import codecs
 try:
-    from setuptools import setup
+    from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup
 
@@ -26,12 +26,7 @@ setup(
     url='https://github.com/pbrisk/putcall',
     bugtrack_url='https://github.com/pbrisk/putcall/issues',
     license='Apache License 2.0',
-    packages=['putcall',
-              'putcall.formulas',
-              'putcall.formulas.plain_vanilla_options',
-              'putcall.formulas.exotic_options',
-              'putcall.formulas.interest_rate_options',
-              'putcall.calibration'],
+    packages=find_packages(),
     install_requires=['mathtoolspy'],
     long_description=codecs.open('README.rst', encoding='utf-8').read(),
     platforms='any',

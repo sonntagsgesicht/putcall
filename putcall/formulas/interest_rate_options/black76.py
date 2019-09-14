@@ -15,8 +15,8 @@ from math import sqrt, log
 from mathtoolspy import cdf_abramowitz_stegun as normal_cdf
 from mathtoolspy import density_normal_dist as normal_density
 
-#from ..option_payoffs import option_payoff, digital_option_payoff, straddle_payoff
-from putcall.formulas.option_payoffs import option_payoff, digital_option_payoff, straddle_payoff
+from ..option_payoffs import option_payoff, digital_option_payoff, straddle_payoff
+#from putcall.formulas.option_payoffs import option_payoff, digital_option_payoff, straddle_payoff
 
 
 def _black_param(forward_value, strike_value,  implied_vol_value, time_value):
