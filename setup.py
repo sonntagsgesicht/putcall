@@ -1,45 +1,53 @@
 # -*- coding: utf-8 -*-
 
-#  putcall
-#  ------------
-#  Collection of classical option pricing formulas.
-#
-#  Author:  pbrisk <pbrisk_at_github@icloud.com>
-#  Copyright: 2016, 2017 Deutsche Postbank AG
-#  Website: https://github.com/pbrisk/putcall
-#  License: APACHE Version 2 License (see LICENSE file)
+# putcall
+# -------
+# Collection of classical option pricing formulas.
+# 
+# Author:   sonntagsgesicht, based on a fork of Deutsche Postbank [pbrisk]
+# Version:  0.2, copyright Saturday, 14 September 2019
+# Website:  https://github.com/sonntagsgesicht/putcall
+# License:  Apache License 2.0 (see LICENSE file)
 
 
 import codecs
+
 try:
     from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup
 
+pkg = __import__('putcall')
 
 setup(
-    name='putcall',
-    description='Collection of classical option pricing formulas.',
-    version='0.1',
-    author='Deutsche Postbank AG [pbrisk]',
-    author_email='pbrisk_at_github@icloud.com',
-    url='https://github.com/pbrisk/putcall',
-    bugtrack_url='https://github.com/pbrisk/putcall/issues',
-    license='Apache License 2.0',
+    name=pkg.__name__,
+    description=pkg.__doc__,
+    version=pkg.__version__,
+    author=pkg.__author__,
+    author_email=pkg.__email__,
+    url=pkg.__url__,
+    license=pkg.__license__,
     packages=find_packages(),
-    install_requires=['mathtoolspy'],
-    long_description=codecs.open('README.rst', encoding='utf-8').read(),
+    package_data={pkg.__name__: list(pkg.__data__)},
+    scripts=pkg.__scripts__,
+    install_requires=pkg.__dependencies__,
+    dependency_links=pkg.__dependency_links__,
+    long_description='\n'+codecs.open('README.rst', encoding='utf-8').read(),
     platforms='any',
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
+        'Development Status :: ' + pkg.__dev_status__,
         'Intended Audience :: Education',
+        'Intended Audience :: Developers',
         'Intended Audience :: Financial and Insurance Industry',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Education',
         'Topic :: Office/Business',
         'Topic :: Office/Business :: Financial',
@@ -48,6 +56,6 @@ setup(
         'Topic :: Utilities',
         'Topic :: Office/Business :: Scheduling',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        'Topic :: Software Development :: Localization',
     ],
 )
+

@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 
-#  putcall
-#  -----------
-#  Collection of classical option pricing formulas.
-#
-#  Author:  pbrisk <pbrisk_at_github@icloud.com>
-#  Website: https://github.com/pbrisk/putcall
-#  License: MIT (see LICENSE file)
+# putcall
+# -------
+# Collection of classical option pricing formulas.
+# 
+# Author:   sonntagsgesicht, based on a fork of Deutsche Postbank [pbrisk]
+# Version:  0.2, copyright Saturday, 14 September 2019
+# Website:  https://github.com/sonntagsgesicht/putcall
+# License:  Apache License 2.0 (see LICENSE file)
+
 
 import os
+import sys
 import unittest
 
 from math import exp
+
+sys.path.append('.')
+sys.path.append('..')
 
 from putcall import black_scholes
 from putcall import OptionType, OptionValuatorIntrinsic, \
