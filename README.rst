@@ -2,12 +2,55 @@
 putcall - option pricing formulae
 =================================
 
-.. image:: https://img.shields.io/codeship/502640f0-461a-0135-6835-62afb45a34d4/master.svg
-    :target: https://codeship.com//projects/231333
+.. image:: https://img.shields.io/codeship/621a4060-ba8a-0137-eb4a-4a1d2f2d4303/master.svg
+    :target: https://codeship.com//projects/364830
 
-.. image:: https://readthedocs.org/projects/putcall/badge
-    :target: http://putcall.readthedocs.io
+.. image:: https://travis-ci.org/sonntagsgesicht/putcall.svg?branch=master
+    :target: https://travis-ci.org/sonntagsgesicht/putcall
 
+.. image:: https://img.shields.io/readthedocs/putcall
+   :target: http://putcall.readthedocs.io
+   :alt: Read the Docs
+
+.. image:: https://img.shields.io/codefactor/grade/github/sonntagsgesicht/putcall/master
+   :target: https://www.codefactor.io/repository/github/sonntagsgesicht/putcall
+   :alt: CodeFactor Grade
+
+.. image:: https://img.shields.io/codeclimate/maintainability/sonntagsgesicht/putcall
+   :target: https://codeclimate.com/github/sonntagsgesicht/putcall/maintainability
+   :alt: Code Climate maintainability
+
+.. image:: https://img.shields.io/codeclimate/coverage/sonntagsgesicht/putcall
+   :target: https://codeclimate.com/github/sonntagsgesicht/putcall/test_coverage
+   :alt: Code Climate Coverage
+
+.. image:: https://img.shields.io/lgtm/grade/python/g/sonntagsgesicht/putcall.svg
+   :target: https://lgtm.com/projects/g/sonntagsgesicht/putcall/context:python/
+   :alt: lgtm grade
+
+.. image:: https://img.shields.io/lgtm/alerts/g/sonntagsgesicht/putcall.svg
+   :target: https://lgtm.com/projects/g/sonntagsgesicht/putcall/alerts/
+   :alt: total lgtm alerts
+
+.. image:: https://img.shields.io/github/license/sonntagsgesicht/putcall
+   :target: https://github.com/sonntagsgesicht/putcall/raw/master/LICENSE
+   :alt: GitHub
+
+.. image:: https://img.shields.io/github/release/sonntagsgesicht/putcall?label=github
+   :target: https://github.com/sonntagsgesicht/putcall/releases
+   :alt: GitHub release
+
+.. image:: https://img.shields.io/pypi/v/putcall
+   :target: https://pypi.org/project/putcall/
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/pypi/pyversions/putcall
+   :target: https://pypi.org/project/putcall/
+   :alt: PyPI - Python Version
+
+.. image:: https://img.shields.io/pypi/dm/putcall
+   :target: https://pypi.org/project/putcall/
+   :alt: PyPI Downloads
 
 Collection of classical option pricing formulas.
 
