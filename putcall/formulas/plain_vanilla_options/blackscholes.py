@@ -3,7 +3,7 @@
 # putcall
 # -------
 # Collection of classical option pricing formulas.
-# 
+#
 # Author:   sonntagsgesicht, based on a fork of Deutsche Postbank [pbrisk]
 # Version:  0.2, copyright Saturday, 14 September 2019
 # Website:  https://github.com/sonntagsgesicht/putcall
@@ -38,7 +38,8 @@ def black_scholes(spot_value, strike_value, vol_value, time_value, is_call_bool,
     :return:
 
     """
-    assert vol_value >= 0
+    if not vol_value >= 0:
+        raise AssertionError("Negative vol in %s" % __name__)
     sigma = vol_value * math.sqrt(time_value)
 
     if sigma == 0:
@@ -74,7 +75,8 @@ def black_scholes_digital(spot_value, strike_value, vol_value, time_value, is_ca
     :rtype: real
     :return:
     """
-    assert vol_value >= 0
+    if not vol_value >= 0:
+        raise AssertionError("Negative vol in %s" % __name__)
     sigma = vol_value * math.sqrt(time_value)
 
     if sigma == 0:
@@ -107,7 +109,8 @@ def forward_black_scholes(forward_value, strike_value, vol_value, time_value, is
     :return:
 
     """
-    assert vol_value >= 0
+    if not vol_value >= 0:
+        raise AssertionError("Negative vol in %s" % __name__)
     sigma = vol_value * math.sqrt(time_value)
 
     if sigma == 0:
@@ -143,7 +146,8 @@ def forward_black_scholes_digital(forward_value, strike_value, vol_value, time_v
     :rtype: real
     :return:
     """
-    assert vol_value >= 0
+    if not vol_value >= 0:
+        raise AssertionError("Negative vol in %s" % __name__)
     sigma = vol_value * math.sqrt(time_value)
 
     if sigma == 0:

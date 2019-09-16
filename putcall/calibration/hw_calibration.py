@@ -3,7 +3,7 @@
 # putcall
 # -------
 # Collection of classical option pricing formulas.
-# 
+#
 # Author:   sonntagsgesicht, based on a fork of Deutsche Postbank [pbrisk]
 # Version:  0.2, copyright Saturday, 14 September 2019
 # Website:  https://github.com/sonntagsgesicht/putcall
@@ -85,12 +85,10 @@ def binary_vol_hw_calibration_cap_floor(price_dict,
         mean_reversion_stop is the mean_reversion_stop on the mean revertion
 
     """
-    assert mean_reversion_start >= 0.0
-    assert mean_reversion_start <= mean_reversion_stop
-    assert mean_reversion_step > 0.0
-    assert volatility_start >= 0.0
-    assert volatility_start <= volatility_stop
-    assert volatility_step > 0.0
+    if not 0.0 <= mean_reversion_start <= mean_reversion_stop and not mean_reversion_step > 0.0:
+        raise AssertionError("Mean reversion either negative or greater expected or negative step.")
+    if not 0.0 <= volatility_start <= volatility_stop and not volatility_step > 0.0:
+        raise AssertionError("Volatility either negative or greater expected or negative step.")
 
     last = [None, None, None]
     for vol in _frange(volatility_start, volatility_stop + volatility_step, volatility_step):
@@ -144,12 +142,10 @@ def binary_mr_hw_calibration_cap_floor(price_dict,
         mean_reversion_stop is the mean_reversion_stop on the mean revertion
 
     """
-    assert mean_reversion_start >= 0.0
-    assert mean_reversion_start <= mean_reversion_stop
-    assert mean_reversion_step > 0.0
-    assert volatility_start >= 0.0
-    assert volatility_start <= volatility_stop
-    assert volatility_step > 0.0
+    if not 0.0 <= mean_reversion_start <= mean_reversion_stop and not mean_reversion_step > 0.0:
+        raise AssertionError("Mean reversion either negative or greater expected or negative step.")
+    if not 0.0 <= volatility_start <= volatility_stop and not volatility_step > 0.0:
+        raise AssertionError("Volatility either negative or greater expected or negative step.")
 
     last = [None, None, None]
     for mr in _frange(mean_reversion_start, mean_reversion_stop + mean_reversion_step, mean_reversion_step):
@@ -208,12 +204,10 @@ def brute_hw_calibration_cap_floor(price_dict,
         threshold is the threshold on the mean reversion
 
     """
-    assert mean_reversion_start >= 0.0
-    assert mean_reversion_start <= mean_reversion_stop
-    assert mean_reversion_step > 0.0
-    assert volatility_start >= 0.0
-    assert volatility_start <= volatility_stop
-    assert volatility_step > 0.0
+    if not 0.0 <= mean_reversion_start <= mean_reversion_stop and not mean_reversion_step > 0.0:
+        raise AssertionError("Mean reversion either negative or greater expected or negative step.")
+    if not 0.0 <= volatility_start <= volatility_stop and not volatility_step > 0.0:
+        raise AssertionError("Volatility either negative or greater expected or negative step.")
 
     mean_reversion_opt = None
     volatility_opt = None
