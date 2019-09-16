@@ -1,1 +1,1 @@
-mathtoolspy
+git+https://github.com/sonntagsgesicht/mathtoolspy
