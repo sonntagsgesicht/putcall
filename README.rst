@@ -1,12 +1,14 @@
-=================================
-putcall - option pricing formulae
-=================================
+
+Python library *putcall*
+------------------------
 
 .. image:: https://img.shields.io/codeship/621a4060-ba8a-0137-eb4a-4a1d2f2d4303/master.svg
-    :target: https://codeship.com//projects/364830
+   :target: https://codeship.com//projects/364830
+   :alt: CodeShip
 
 .. image:: https://travis-ci.org/sonntagsgesicht/putcall.svg?branch=master
-    :target: https://travis-ci.org/sonntagsgesicht/putcall
+   :target: https://travis-ci.org/sonntagsgesicht/putcall
+   :alt: Travis ci
 
 .. image:: https://img.shields.io/readthedocs/putcall
    :target: http://putcall.readthedocs.io
@@ -20,9 +22,9 @@ putcall - option pricing formulae
    :target: https://codeclimate.com/github/sonntagsgesicht/putcall/maintainability
    :alt: Code Climate maintainability
 
-.. image:: https://img.shields.io/codeclimate/coverage/sonntagsgesicht/putcall
-   :target: https://codeclimate.com/github/sonntagsgesicht/putcall/test_coverage
-   :alt: Code Climate Coverage
+.. image:: https://img.shields.io/codecov/c/github/sonntagsgesicht/putcall
+   :target: https://codecov.io/gh/sonntagsgesicht/putcall
+   :alt: Codecov
 
 .. image:: https://img.shields.io/lgtm/grade/python/g/sonntagsgesicht/putcall.svg
    :target: https://lgtm.com/projects/g/sonntagsgesicht/putcall/context:python/
