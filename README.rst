@@ -60,11 +60,19 @@ Collection of classical option pricing formulas.
 Example Usage
 -------------
 
-.. code-block:: python
+.. doctest::
 
-    from datetime import date
+    >>> from putcall import black_scholes
 
-    from putcall import black_scholes
+    >>> spot_value = 100
+    >>> strike_value = 105
+    >>> vol_value = 0.2
+    >>> time_value = 2.0
+    >>> is_call_bool = True
+    >>> rate = 0.05
+
+    >>> black_scholes(spot_value, strike_value, vol_value, time_value, is_call_bool, rate)
+    13.639602713024757
 
 
 Install

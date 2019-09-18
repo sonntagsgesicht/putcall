@@ -1,4 +1,6 @@
 
+.. module:: putcall
+
 -----------------
 API Documentation
 -----------------
@@ -9,34 +11,36 @@ API Documentation
 Option Pricing Formulas
 =======================
 
-Simple Option Payoffs
----------------------
+Intrinsic Option Payoffs
+------------------------
 
-.. automodule:: option_payoffs
+.. automodule:: putcall.formulas.option_payoffs
+
 
 Black Scholes
 -------------
 
-.. automodule:: blackscholes
-
-Black 76
---------
-
-.. automodule:: black76
-
-HullWhite
----------
-
-.. automodule:: hullwhite
+.. automodule:: putcall.formulas.plain_vanilla_options.blackscholes
 
 
-Option Calibrator
-=================
+Interest Rate Options
+---------------------
 
-.. automodule:: implied_volatility
+.. automodule:: putcall.formulas.interest_rate_options.bachelier
+.. automodule:: putcall.formulas.interest_rate_options.black76
+.. automodule:: putcall.formulas.interest_rate_options.hullwhite
+.. automodule:: putcall.formulas.interest_rate_options.sabr
+
+
+Option Calibration
+==================
+
+.. automodule:: putcall.calibration.black_calibration
+.. automodule:: putcall.calibration.hw_calibration
+.. automodule:: putcall.calibration.implied_volatility
 
 
 Option Valuators
 ================
 
-.. automodule:: optionvaluator
+.. automodule:: putcall.optionvaluator
