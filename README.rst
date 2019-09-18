@@ -60,7 +60,7 @@ Collection of classical option pricing formulas.
 Example Usage
 -------------
 
-.. doctest::
+.. code-block::
 
     >>> from putcall import black_scholes
 
